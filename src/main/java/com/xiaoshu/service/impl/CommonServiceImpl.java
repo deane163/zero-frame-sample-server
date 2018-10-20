@@ -1,6 +1,8 @@
 package com.xiaoshu.service.impl;
 
 import com.xiaoshu.service.CommonService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 /**
@@ -32,9 +34,11 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class CommonServiceImpl implements CommonService {
+    private  final Logger logger = LoggerFactory.getLogger(this.getClass());
 
     @Override
     public String hello(String clientId) {
-        return "Client id is :"+ clientId;
+        logger.info("此处的目的是引入 ServiceImpl 的测试是否正常");
+        return  clientId;
     }
 }
