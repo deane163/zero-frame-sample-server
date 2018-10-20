@@ -1,6 +1,8 @@
 package com.xiaoshu;
 
 import com.xiaoshu.config.AccessFilter;
+import com.xiaoshu.config.NettyServer;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
@@ -39,6 +41,7 @@ import org.springframework.web.filter.CharacterEncodingFilter;
 @SpringBootApplication
 public class ApplicationZeroSampleStart 
 {
+
     public static void main( String[] args )
     {
     	System.out.println("================= start Application");
