@@ -2,12 +2,16 @@ package com.xiaoshu;
 
 import com.xiaoshu.config.AccessFilter;
 import com.xiaoshu.config.NettyServer;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.filter.CharacterEncodingFilter;
+
+import java.util.Date;
 
 
 /**
@@ -41,10 +45,11 @@ import org.springframework.web.filter.CharacterEncodingFilter;
 @SpringBootApplication
 public class ApplicationZeroSampleStart 
 {
+    private static final Logger logger = LoggerFactory.getLogger(ApplicationZeroSampleStart.class);
 
     public static void main( String[] args )
     {
-    	System.out.println("================= start Application");
+    	logger.info("start up the ApplicationSampleStart && Netty Server on date :{}",new Date());
         SpringApplication.run(ApplicationZeroSampleStart.class, args);
     }
 
