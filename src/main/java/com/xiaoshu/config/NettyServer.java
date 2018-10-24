@@ -12,6 +12,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Component;
 
+import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -50,6 +51,7 @@ public class NettyServer {
 
     @Bean
     public NettyServerBootstrap nettyServerBootstrap() throws InterruptedException {
+        logger.info("start up the Netty Server on date:{}",new Date());
         NettyServerBootstrap bootstrap = new NettyServerBootstrap(9999, commonService);
         Thread thread = new Thread(bootstrap);
         thread.setDaemon(true);
